@@ -1,0 +1,56 @@
+.Editor {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+
+    >.Title {
+        height: 40px;
+        padding-top: 10px;
+        padding-left: 10px;
+        width: 100%;
+        margin-bottom: 20px;
+        
+        >input {
+            background-color: #f8f8f8;
+            border: 0px;
+            height: 40px;
+            font-size: 28px;
+            outline: none;
+            width: 100%;
+        }
+        
+
+    }
+
+    .UploadPost {
+        height: 30px;
+        margin-top: 10px;
+
+        >button {
+            height: 100%;
+            width: 100%;
+            border: 1px solid #0f0047;
+            background-color: #0f0047;
+            color:#f8f8f8;
+        }
+        >button:disabled {
+            background-color: black;
+            opacity: 0.3;
+        }
+    }
+
+
+}
+
+.alert {
+    text-align: center;
+    margin: 0px auto;    
+}
+
+@media screen and (min-width : 760px) {
+    .Editor {
+        width: 80%;
+        margin: 0px auto;
+    }
+
+}
