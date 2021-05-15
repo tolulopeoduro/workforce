@@ -1,0 +1,19 @@
+.Backdrop {
+    height: 100vh;
+    top : 0;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    z-index: 50;
+}
+
+.noDisplay {
+    display: none;
+}
+
+@media screen and (min-width : 760px) {
+    .Backdrop {
+        display: none;
+    }
+}

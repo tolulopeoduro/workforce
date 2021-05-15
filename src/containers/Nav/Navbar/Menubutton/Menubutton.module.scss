@@ -1,0 +1,49 @@
+.Menubutton {
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 24px;    
+    flex-direction: column;
+
+    div {
+        height: 4px;
+        background-color: white;
+        box-sizing: border-box;
+
+        >* {
+            transition: transform 4s;
+        }
+    }
+
+
+}
+
+.active {
+    margin-top: 10px;
+}
+
+.active > .a {
+    transform: rotate(45deg);
+}
+.active > .b {
+    transform: rotate(315deg);
+    position: relative;
+    top : -14px
+}
+
+.active > .c {
+    display: none;
+}
+
+@media screen and (min-width : 760px) {
+    .Menubutton {
+        display: none;
+    }
+}
+
+@media screen and (min-width : 760px) {
+    .Editor {
+        width: 80%;
+    }
+
+}

@@ -1,0 +1,61 @@
+
+.Navbar {
+    height: 60px;
+    background-color: #0f0041;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    overflow: hidden;
+    padding: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition-duration: 200ms;
+    z-index: 100;
+    
+    .Links {
+        display: none;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 400px;
+        margin-right: 30px;
+
+        > a {
+            height: 40px;
+            font-family: 'mainfont';
+            display: block;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            font-size: small;
+            width: 100%;
+            box-sizing: border-box;
+            align-items: center;
+        }
+        
+        a:hover {
+            border-bottom: 1px solid #fff;
+            background-color: rgba($color: #fff, $alpha: 0.3);
+            transition: background-color , 0.2s;
+        }
+    }
+}
+
+
+.Logo {
+    box-sizing: border-box;
+    float: left;
+}
+
+
+@media screen and (min-width : 760px) {
+    .Navbar {
+        .Links {
+            display: flex;
+        }
+    }
+}

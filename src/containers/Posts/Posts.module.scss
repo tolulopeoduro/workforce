@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'openSans-regular';
+    src: url("../../fonts/OpenSans-Regular.ttf");
+}
+
+.Posts{
+    height: 100px;
+    width: 100%; 
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    overflow: auto;
+
+    .AddPost {
+        position: absolute;
+        bottom : 80px;
+        right : 40px;
+        box-shadow: #696969 3px 3px 3px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        background-color: #0f0047;
+        transition: height 0.4s , width 0.4s;
+    }
+    
+    
+}
+
+    .AddPost:hover {
+        height: 60px;
+        width: 60px;
+    }
+.Header {
+    font-family: 'openSans-regular';
+    font-size: 35px;
+    color: #3a3a3a;
+}

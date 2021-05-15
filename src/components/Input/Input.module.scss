@@ -1,0 +1,13 @@
+.Input {
+    height: 45px;
+}
+
+.Input > input {
+    outline: none;
+    height: 40px;
+    font-size: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #0f0041;
+    border-radius: 3px;
+}
