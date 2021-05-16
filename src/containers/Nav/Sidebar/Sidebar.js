@@ -18,7 +18,7 @@ const Sidebar = (props) => {
             <div className = {classes.Links}>
                 <Link onClick = {props.handleClick} to = "/posts">Home</Link>
                 <Link onClick = {props.handleClick} to = "/newpost">Create post</Link>
-                <Link onClick = {props.handleClick} to = {`/profile/${auth.data.userId}`}>My profile</Link>
+                {auth.isLoggedIn ? <Link onClick = {props.handleClick} to = {`/profile/${auth.data.userId}`}>My profile</Link> : null}
                 {
                     !auth.isLoggedIn ?
                     <Link onClick = {props.handleClick} to = "/auth/signup">Signup/Signin</Link>:

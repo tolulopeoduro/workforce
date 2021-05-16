@@ -11,8 +11,8 @@ const Layout = () => {
     return (
         <div className = {classes.Layout}>
             <Navbar menuactive = {toggle} handleClick = {() => toggle ? setToggle(false) : setToggle(true)} />
-            <Sidebar active = {toggle}/>
-            <Backdrop active = {toggle}/>
+            <Sidebar active = {toggle} handleClick= {() => toggle ? setToggle(false) : setToggle(true)} />
+            <Backdrop active = {toggle} handleClick= {() => toggle ? setToggle(false) : setToggle(true)}/>
             <Main/>
         </div>
     )

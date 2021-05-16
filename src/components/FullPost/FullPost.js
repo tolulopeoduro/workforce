@@ -20,6 +20,11 @@ const FullPost = (props) => {
     const auth = useSelector(state => state.userData)
 
 
+    useEffect(() => {
+        document.title = `Workforce`
+        setTimeout(() => {document.title =`${title} - Workforce`} , 0)
+    }, [title])
+
     const editPost = () => {
         if (auth.data.userId === data.userId) {
             props.history.push(`/editor/${props.history.location.pathname.split('/')[2]}`)
@@ -29,23 +34,23 @@ const FullPost = (props) => {
     }
 
     useEffect(() => {
-        axios.get(`https://workforce001.herokuapp.com/api/posts/${props.history.location.pathname.split('/')[2]}`)
-        .then((response) => {
-            setData(response.data)
-            setContent(response.data.content)
-            setTitle(response.data.title)
-        })
-    } , [props.history.location.pathname])
+        if (data == null) {
+            axios.get(`https://workforce001.herokuapp.com/api/posts/${props.history.location.pathname.split('/')[2]}`)
+            .then((response) => {
+                setData(response.data)
+                setContent(response.data.content)
+                setTitle(response.data.title)
+            })
+        }
+    } , [null])
 
 
 
     useEffect(() => {
         Prism.highlightAll();
-      });
+      }, []);
 
-    useEffect(() => {
-        document.title = ` Blog post - Workforce`    
-    }, [data])
+    
 
     const deletePost = () => {
         let config = {
@@ -57,7 +62,7 @@ const FullPost = (props) => {
             if (response.status === 200) {
                 props.history.goBack()
             }
-        } , [props.history.location.pathname])
+        } , [null])
     }
 
     

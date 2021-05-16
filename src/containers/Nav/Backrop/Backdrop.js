@@ -3,7 +3,7 @@ import React from 'react'
 
 const Backdrop = (props) => {
     return (
-        <div className = {props.active ? classes.Backdrop : [classes.Backdrop , classes.noDisplay].join(' ')}>
+        <div onClick = {props.handleClick} className = {props.active ? classes.Backdrop : [classes.Backdrop , classes.noDisplay].join(' ')}>
             
         </div>
     )

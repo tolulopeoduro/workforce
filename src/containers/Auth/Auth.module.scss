@@ -4,11 +4,22 @@
 
 .Logo {
     text-align: center;
-    height: 300px;
-    padding-top: 100px;
+    height: 220px;
+    padding-top: 50px;
     >img {
         height: 100px;
         width: 300px;
         margin: 0px auto;
+    }
+}
+
+@media screen and (min-width : 760px) {
+    .Auth {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin : auto;
+        height : 100%
     }
 }

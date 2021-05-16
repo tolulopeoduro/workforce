@@ -83,6 +83,7 @@ const Editor = (props) => {
                 init={{
                     selector : "textarea",
                     height: 500,
+                    content_css : '/EditorStyle.css' ,
                     file_picker_callback : uploadImg(),
                     file_picker_types: 'image file media',
                     images_upload_url: "#",
@@ -91,7 +92,7 @@ const Editor = (props) => {
                     } ,
                     menubar: false,
                     plugins: [
-                        'advlist autolink lists link image',
+                        'advlist autolink lists link',
                         'charmap print preview anchor help',
                         'searchreplace visualblocks codesample',
                         'media table paste wordcount code'
@@ -100,7 +101,7 @@ const Editor = (props) => {
                     [
                         'undo redo | formatselect | bold italic |  ',
                         'alignleft aligncenter alignright |  ',
-                        'bullist numlist| image codesample code | help'
+                        'bullist numlist| codesample code | help'
                     ]
                 }}
                 onChange={handleEditorChange}
@@ -109,7 +110,7 @@ const Editor = (props) => {
             
 
             <div className = {classes.UploadPost}>
-                <button disabled = {auth.isLoggedIn === false} onClick = {submit}>{props.update ? "Update post" : "Create post"}</button>
+                <button disabled = {auth.isLoggedIn === false  || title === "" || content === ""} onClick = {submit}>{props.update ? "Update post" : "Create post"}</button>
             </div>
             {auth.isLoggedIn === false ? <p className = {classes.alert}>please login to save your post</p> : null}
         </div>

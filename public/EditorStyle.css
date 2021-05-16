@@ -1,0 +1,58 @@
+    @font-face {
+        font-family: 'Monsterrat-Medium';
+        src: url('../../fonts/Montserrat-Medium.ttf');
+    }
+
+    @font-face {
+        font-family: 'Newsreader-Regular';
+        src: url('../../fonts/Newsreader-Regular.ttf');
+    }
+
+    body {
+        background-color: #f8f8f8;
+    }
+
+    h2 ,  h3 ,  h4 , h5 , h6 {
+        margin: 15px 0px 5px 0px;
+        font-weight: bold;
+        font-family: 'Monsterrat-Medium';
+    }
+    
+     h2 {
+        font-size: 25px;
+    }
+    
+     h3 {
+        font-size: 21px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    
+    p , li {
+        font-size: 1.1em;
+        margin : 8px 0px;
+        line-height: 1.4em;
+        font-family: 'Newreader-Regular';
+    }
+
+    ul {
+        margin-left: 40px;
+    }
+    
+    li {
+        list-style: circle;
+        list-style-type: disc;
+    }
+
+    ol {
+        margin-left: 40px;  
+    }
+    
+    

@@ -37,7 +37,7 @@ const Main = (props) => {
     return (
         <div className = {classes.Main}>
             <Switch>
-                <Route path = "/posts/:id" component = {() => <FullPost/>} />
+                <Route path = "/posts/:id" component = {FullPost} />
                 <Route path = "/editor/:id" component = {() => <Editor update = {true} />} />
                 <Route path = "/profile/:id" exact component = {Profile} />
                 <Route path = "/posts" exact component ={Posts} />

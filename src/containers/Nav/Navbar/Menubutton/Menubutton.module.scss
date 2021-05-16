@@ -1,6 +1,5 @@
 .Menubutton {
     height: 20px;
-    display: flex;
     justify-content: space-between;
     width: 24px;    
     flex-direction: column;
@@ -8,31 +7,45 @@
     div {
         height: 4px;
         background-color: white;
+        border: 0px solid white;
+        
+    }
+    
+    .a {
         box-sizing: border-box;
-
-        >* {
-            transition: transform 4s;
-        }
+        position: relative;
+        transition: transform 0.4s , top 0.4s;
+        top: 0px;
+    }
+    
+    .b {
+        box-sizing: border-box;
+        position: relative;
+        background-color: rgba($color: #fff, $alpha: 1.0);
+        transition: background-color 0.4s;
+        top:4px;
+    }
+    .c {
+        transition: transform 0.4s , top 0.4s;
+        box-sizing: border-box;
+        position: relative;
+        top:8px;
     }
 
-
 }
 
-.active {
-    margin-top: 10px;
-}
 
 .active > .a {
     transform: rotate(45deg);
+    top : 4px;
 }
 .active > .b {
-    transform: rotate(315deg);
-    position: relative;
-    top : -14px
+    background-color: rgba($color: #fff, $alpha: 0);
 }
 
 .active > .c {
-    display: none;
+    transform: rotate(-45deg);
+    top : -4px
 }
 
 @media screen and (min-width : 760px) {
