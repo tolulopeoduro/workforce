@@ -68,7 +68,7 @@ const Editor = (props) => {
                 }
             }
             )
-        } , [])
+        } , [props.history.location.pathname])
         document.title = `${props.update ? 'Edit post - Workforce' : 'Create post - Workforce'}`
 
         return (

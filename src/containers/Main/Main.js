@@ -32,7 +32,7 @@ const Main = (props) => {
         } else {
             dispatch(userActions.signOut())
         }
-    }, [] )
+    }, [auth.isLoggedIn , dispatch] )
 
     return (
         <div className = {classes.Main}>

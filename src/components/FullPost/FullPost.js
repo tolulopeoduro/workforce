@@ -35,7 +35,7 @@ const FullPost = (props) => {
             setContent(response.data.content)
             setTitle(response.data.title)
         })
-    } , [])
+    } , [props.history.location.pathname])
 
 
 
@@ -57,7 +57,7 @@ const FullPost = (props) => {
             if (response.status === 200) {
                 props.history.goBack()
             }
-        })
+        } , [props.history.location.pathname])
     }
 
     
@@ -68,7 +68,7 @@ const FullPost = (props) => {
                 <React.Fragment>
                     <span>{data.release_time}</span>
                     <div className = {classes.Title}>
-                        <h1>{data.title}</h1>
+                        <h1>{title}</h1>
                         <span>By : <Link to = {`/profile/${data.userId}`}>{data.author}</Link></span>
                     </div>
                     {
