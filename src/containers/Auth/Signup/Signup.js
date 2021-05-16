@@ -84,6 +84,7 @@ const Signup = (props) => {
         }
     })
 
+    document.title = "Signup-Workforce"
     return (
         <div className = {classes.Signup}>
                         <form  className = {classes.Form} onSubmit = {handleSubmit}>

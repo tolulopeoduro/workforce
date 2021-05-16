@@ -21,7 +21,7 @@ const Profile = (props) => {
         .then(response => response.status === 200 ? setPosts(response.data) : null)
     })
 
-
+    document.title = `${profileData.username}`
     return (
         <div className = {classes.Profile}>
             <div className = {classes.profilePic}>

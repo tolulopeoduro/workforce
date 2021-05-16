@@ -13,6 +13,7 @@ import Spinner from '../Spinner/Spinner'
 const FullPost = (props) => {
 
     const [data , setData] = useState(null)
+    const [title , setTitle] = useState(null)
     const [content , setContent] = useState("")
     const [deletePrompt , toggleDeletePrompt] = useState(false)
 
@@ -32,6 +33,7 @@ const FullPost = (props) => {
         .then((response) => {
             setData(response.data)
             setContent(response.data.content)
+            setTitle(response.data.title)
         })
     } , [])
 
@@ -40,6 +42,10 @@ const FullPost = (props) => {
     useEffect(() => {
         Prism.highlightAll();
       });
+
+    useEffect(() => {
+        document.title = ` Blog post - Workforce`    
+    }, [data])
 
     const deletePost = () => {
         let config = {
@@ -54,6 +60,7 @@ const FullPost = (props) => {
         })
     }
 
+    
     return (
         <div className = {classes.FullPost}>
             {

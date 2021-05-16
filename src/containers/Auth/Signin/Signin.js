@@ -85,6 +85,7 @@ const Signin = (props) => {
         }
     })
     
+    document.title = 'Signin - Workforce'
     
     return (
         <div className = {classes.Signin}>

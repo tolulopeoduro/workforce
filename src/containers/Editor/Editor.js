@@ -69,7 +69,8 @@ const Editor = (props) => {
             }
             )
         } , [])
-        
+        document.title = `${props.update ? 'Edit post - Workforce' : 'Create post - Workforce'}`
+
         return (
             <div className = {classes.Editor}>
             <div className = {classes.Title}>
