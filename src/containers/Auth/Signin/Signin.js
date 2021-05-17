@@ -54,7 +54,7 @@ const Signin = (props) => {
                     if (response.status === 200) {
                         const userData = response.data
                         localStorage.set("userData" , userData)
-                        props.history.goBack() 
+                        props.history.push('/posts') 
                     }
                     
                     setLoading(false)

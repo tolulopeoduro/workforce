@@ -52,7 +52,7 @@ const Signup = (props) => {
             .then(
                 (response) => {
                     if (response.status === 201) {
-                        props.history.push('/auth/signin')
+                        props.history.push('/posts')
                     }
                     setLoading(false)
                 }
